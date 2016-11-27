@@ -108,11 +108,9 @@ RSpec.configure do |config|
   Kernel.srand config.seed
 
   config.expose_dsl_globally = true
-
-  config.extend VCR::RSpec::Macros
 end
 
-VCR.config do |c|
+VCR.configure do |c|
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.configure_rspec_metadata!
