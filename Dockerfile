@@ -12,7 +12,6 @@ RUN bundle install
 
 COPY . /app/
 
-ENV PORT 5678
-EXPOSE 5678
+ENV PORT $PORT
 CMD ["ruby", "app.rb"]
 
