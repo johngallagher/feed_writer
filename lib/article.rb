@@ -1,3 +1,6 @@
+require 'open-uri'
+require 'json'
+
 class Article < OpenStruct
   def self.raw_articles
     JSON.parse(open('http://localhost:4567/articles').read)['articles']

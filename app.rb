@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
-require 'open-uri'
 
 $LOAD_PATH << File.expand_path(File.dirname(__FILE__), "lib")
 require 'article'
