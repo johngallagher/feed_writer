@@ -7,5 +7,6 @@ require 'article'
 set :bind, '0.0.0.0'
 
 get '/articles' do
+  logger.info("The hostname is #{ENV['HOSTNAME']}")
   "First article has title '#{Article.first.title}'."
 end
