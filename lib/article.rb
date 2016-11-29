@@ -3,7 +3,7 @@ require 'json'
 
 class Article < OpenStruct
   def self.raw_articles
-    JSON.parse(open('http://feed_reader/articles').read)['articles']
+    JSON.parse(open('http://feed-reader/articles').read)['articles']
   end
 
   def self.all
